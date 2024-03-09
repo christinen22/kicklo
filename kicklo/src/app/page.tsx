@@ -23,7 +23,7 @@ async function getPosts() {
 
   const res = await fetch(
     `${
-      process.env.NEXT_PUBLIC_WORDPRESS_API_ENDPOINT
+      process.env.NEXT_PUBLIC_WORDPRESS_API_ENDPOINT as string
     }?query=${encodeURIComponent(query)}`,
     {
       method: "GET",
