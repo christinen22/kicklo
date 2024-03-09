@@ -18,7 +18,7 @@ export async function fetchPostByUri(uri: string) {
         uri,
     };
 
-    const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_ENDPOINT!, {
+    const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_ENDPOINT as string, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
